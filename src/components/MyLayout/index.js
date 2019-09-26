@@ -36,7 +36,7 @@ const Logo = () => (
 
 export const Layout = ({ children }) => (
   <Grid container={true} wrap={'nowrap'} style={{ height: '100%' }}>
-    <Grid item={true} style={{ width: 330, padding: '60px 30px', flexShrink: 0, overflow: 'auto' }}>
+    <Grid item={true} style={{ width: 330, padding: '60px 30px', flexShrink: 0, overflow: 'auto', boxShadow: '0px 0px 10px -1px silver', zIndex: 1 }}>
       <Logo />
       <Menu />
       <SocialNetworks />

@@ -5,6 +5,11 @@ import { Link } from "gatsby"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { Layout } from "../components/MyLayout"
+import { Subtitle } from "../components/Section/Subtitle"
+import { Title } from "../components/Section/Title"
+import { Section } from "../components/Section"
+
+import Grid from '@material-ui/core/Grid';
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +20,16 @@ const IndexPage = () => (
         <div className={'spinner'} style={{ border: '5px solid blue', position: 'absolute', top: -5, left: -5, width: '100%', height: '100%', borderLeftColor: 'transparent', borderTopColor: 'rgba(255,255,255,0.3)', borderRightColor: 'transparent', borderBottomColor: 'rgba(255,255,255,0.3)', borderRadius: '50%', display: 'block' }} />
       </div>
     </div>
-    <div style={{ backgroundColor: 'rgba(0,255,0,0.5)', height: '100%' }} ></div>
+    <div style={{ backgroundColor: 'rgba(255,255,255,1)' }} >
+      <Section title={'Información'} subtitle={'Sobre mi'}>
+        <Grid container={true}>
+          <Grid item={true} xs={4}>
+            <img style={{ width: '100%', margin: 'auto', display: 'block' }} src={'https://instagram.fscl10-1.fna.fbcdn.net/vp/09a1deec075aa017aba4d6231f617549/5E28FDDE/t51.2885-15/e35/66402506_938234706520411_4423553201685325107_n.jpg?_nc_ht=instagram.fscl10-1.fna.fbcdn.net&_nc_cat=107'} />
+          </Grid>
+          <Grid item={true} xs={8}></Grid>
+        </Grid>
+      </Section>
+    </div>
   </Layout>
 )
 

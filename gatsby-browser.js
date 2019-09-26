@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+const React = require('react');
+const { ThemeProvider } = require('@material-ui/styles');
+const { createMuiTheme } = require('@material-ui/core/styles');
 
-// You can delete this file if you're not using it
+const theme = createMuiTheme();
+
+exports.wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+    {element}
+  </ThemeProvider>
+)
